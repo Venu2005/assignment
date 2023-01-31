@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'login_page.dart';
+
 
 void main() {
   runApp(Moviedom());
@@ -9,7 +11,7 @@ class Moviedom extends StatelessWidget{
 Widget build(BuildContext context){
 return MaterialApp(
   title: "Moviedom",
-  theme: ThemeData(primarySwatch:Colors.yellow ),
+  theme: ThemeData(primarySwatch:Colors.red ),
   home: LoginPage()
     );
 
@@ -17,17 +19,3 @@ return MaterialApp(
 }
 
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-    appBar: AppBar(),
-    drawer: Drawer(),
-    floatingActionButton: FloatingActionButton(onPressed: () {print("clicked");
-     }),
-    body: Text("hello"),
-    );
-  }
-}
