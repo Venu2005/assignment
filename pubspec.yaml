@@ -68,6 +68,12 @@ flutter:
     - assets/images/logo.PNG
     - assets/images/netflix.png
     - assets/images/signup.PNG
+    - assets/images/happy.jpg
+    - assets/images/sad.jfif
+    - assets/images/excited.jfif
+    - assets/images/stressed.jfif
+
+
 
 
 
