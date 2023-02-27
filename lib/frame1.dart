@@ -3,6 +3,7 @@ import 'package:assignment/frame2.dart';
 import 'package:assignment/frame3.dart';
 import 'package:assignment/frame4.dart';
 import 'package:assignment/frame5.dart';
+import 'package:assignment/frame6.dart';
 import 'package:flutter/material.dart';
 import 'widgets.dart';
 
@@ -37,7 +38,7 @@ class Frame1 extends StatefulWidget {
 
 
               Container(
-                height: 100,
+                height: 70,
                 child: Center(
                   child: Text(
                     "SELECT YOUR MOOD", style: TextStyle(fontSize: 25,
@@ -58,7 +59,7 @@ GestureDetector(
     );
   },
   child: Container(
-            height: 150,
+            height: 130,
             child: Row(
               children: [
                 Expanded(
@@ -107,7 +108,7 @@ GestureDetector(
     );
   },
   child:  Container(
-            height: 150,
+            height: 130,
             child: Row(
               children: [
 
@@ -152,7 +153,7 @@ GestureDetector(
     );
   },
   child: Container(
-            height: 150,
+            height: 130,
             child: Row(
               children: [
                 Expanded(
@@ -198,7 +199,7 @@ GestureDetector(
     );
   },
   child:  Container(
-            height: 150,
+            height: 130,
             child: Row(
               children: [
 
@@ -232,6 +233,33 @@ GestureDetector(
 
 ),
 
+
+ SizedBox(
+                height: 25,
+              ),
+
+
+
+ElevatedButton(
+                            
+              
+              onPressed: () {
+             
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Frame6(),
+                  ),
+                );
+              
+            },
+            child: Text("SKIP", style: TextStyle(
+      fontSize: 20.0,
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
+    ),),
+    
+          ),
        
             
       ],

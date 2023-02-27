@@ -12,12 +12,19 @@ class Frame2 extends StatefulWidget {
 
 class Frame2State extends State<Frame2> {
 
+  
+
+
   @override
   Widget build(BuildContext context)  {
     return Stack(
       children: [
         BackgroundImage(),
-      ],
+
+        Scaffold(
+          
+        ),
+      ]
     );
   }
   
