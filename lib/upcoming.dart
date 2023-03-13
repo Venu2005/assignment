@@ -1,12 +1,10 @@
-import 'package:assignment/description.dart';
 import 'package:flutter/material.dart';
 
 
+class UpcomingMovies extends StatelessWidget {
+  final List upcoming;
 
-class TrendingMovies extends StatelessWidget {
-  final List trending;
-
-  const TrendingMovies({super.key, required this.trending});
+  const UpcomingMovies({super.key, required this.upcoming});
 
 
   
@@ -25,7 +23,7 @@ class TrendingMovies extends StatelessWidget {
 
            
       Text(
-        'TRENDING',
+        'UPCOMING',
         style: TextStyle(fontSize: 20,color: Colors.blue,
                   fontWeight: FontWeight.bold),
       ),
@@ -36,25 +34,13 @@ class TrendingMovies extends StatelessWidget {
 
         Container(
               height: 210,
-              child: ListView.builder(itemCount:trending.length ,
+              child: ListView.builder(itemCount:upcoming.length ,
               scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index){
 
                     return InkWell(
                       onTap: () {
                         
-                        Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Description(name: trending[index]["title"],
-                     description: trending[index]["overview"], 
-                     banneurl: "https://image.tmdb.org/t/p/w500/" + trending[index]["backdrop_path"], 
-                     posterurl: "https://image.tmdb.org/t/p/w500/" +trending[index]["poster_path"] ,
-                      vote: trending[index]["vote_average"].toString(), 
-                      launch_on: trending[index]["release_date"]),
-                  ),
-                );
-
                       },
 
                       child: Container(
@@ -64,11 +50,12 @@ class TrendingMovies extends StatelessWidget {
                           height: 200,
                             decoration: BoxDecoration(image: DecorationImage(image: NetworkImage(
                               
-                              "https://image.tmdb.org/t/p/w500/"+ trending[index]["poster_path"]
+                              "https://image.tmdb.org/t/p/w500/"+ upcoming[index]["poster_path"]
                               ))),
                           ),
 
                           
+
 
                         ]),
                       ),

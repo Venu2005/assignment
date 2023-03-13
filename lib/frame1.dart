@@ -235,7 +235,7 @@ GestureDetector(
 
 
  SizedBox(
-                height: 25,
+                height: 57,
               ),
 
 
