@@ -46,6 +46,7 @@ class Frame6State extends State<Frame6> {
     Map trendingresult = await tmdbWithCustomLogs.v3.trending.getTrending();
     Map topRatedresult = await tmdbWithCustomLogs.v3.movies.getTopRated();
     Map upcomingresult = await tmdbWithCustomLogs.v3.movies.getUpcoming();
+    
 
 
     setState(() {

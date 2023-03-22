@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'description.dart';
+
 
 class UpcomingMovies extends StatelessWidget {
   final List upcoming;
@@ -40,7 +42,17 @@ class UpcomingMovies extends StatelessWidget {
 
                     return InkWell(
                       onTap: () {
-                        
+                         Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Description(name: upcoming[index]["title"],
+                     description: upcoming[index]["overview"], 
+                     banneurl: "https://image.tmdb.org/t/p/w500/" + upcoming[index]["backdrop_path"], 
+                     posterurl: "https://image.tmdb.org/t/p/w500/" +upcoming[index]["poster_path"] ,
+                      vote: upcoming[index]["vote_average"].toString(), 
+                      launch_on: upcoming[index]["release_date"]),
+                  ),
+                );
                       },
 
                       child: Container(

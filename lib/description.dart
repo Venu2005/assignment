@@ -27,7 +27,7 @@ class Description extends StatelessWidget {
                       child: Image.network(banneurl, fit:BoxFit.cover),
                     )),
 
-                    Positioned(bottom: 10,
+                    Positioned(bottom: 0,
                       child: Text( "⭐ Average rating : " + vote , style: TextStyle(color: Colors.white,)))
 
                   ],
@@ -74,3 +74,7 @@ class Description extends StatelessWidget {
     );
   }
 }
+
+
+
+

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'description.dart';
+
 
 class TopRatedMovies extends StatelessWidget {
   final List topRated;
@@ -42,7 +44,17 @@ class TopRatedMovies extends StatelessWidget {
 
                     return InkWell(
                       onTap: () {
-                        
+                         Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Description(name: topRated[index]["title"],
+                     description: topRated[index]["overview"], 
+                     banneurl: "https://image.tmdb.org/t/p/w500/" + topRated[index]["backdrop_path"], 
+                     posterurl: "https://image.tmdb.org/t/p/w500/" +topRated[index]["poster_path"] ,
+                      vote: topRated[index]["vote_average"].toString(), 
+                      launch_on: topRated[index]["release_date"]),
+                  ),
+                );
                       },
 
                       child: Container(
