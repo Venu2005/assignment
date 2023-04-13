@@ -1,8 +1,13 @@
 
+import 'package:firebase_auth/firebase_auth.dart' 
+    hide EmailAuthProvider, PhoneAuthProvider;    
+import 'package:flutter/material.dart';           
+import 'package:provider/provider.dart';          
 
-
-import 'package:flutter/material.dart';
+import 'app_state.dart';                          
+import 'authentication.dart';             
 import 'widgets.dart';
+import 'widgets2.dart';
 import 'package:assignment/frame1.dart';
 
 class LoginPage extends StatefulWidget {
@@ -13,8 +18,8 @@ class LoginPage extends StatefulWidget {
 }
  
  class LoginPageState extends State<LoginPage> {
- final usernameController = TextEditingController();
-  final passwordController = TextEditingController();
+ //final usernameController = TextEditingController();
+  //final passwordController = TextEditingController();
 
  
   
@@ -50,7 +55,7 @@ class LoginPage extends StatefulWidget {
                 ),
                  
                  ),
-              
+            
               Container(
                 width:50 ,
                 height: 50,
@@ -65,7 +70,7 @@ class LoginPage extends StatefulWidget {
                 height: 50,
               ),
 
-              Container(
+   /*           Container(
                   child :Text(
                     "Username", style: TextStyle(fontSize: 30,
                    color: Colors.white,
@@ -135,13 +140,22 @@ class LoginPage extends StatefulWidget {
                 ),
               ),
 
-
+*/
               SizedBox(
                 height: 20,
               ),
 
+                Consumer<ApplicationState>(
+            builder: (context, appState, _) => AuthFunc(
+                loggedIn: appState.loggedIn,
+                signOut: () {
+                  FirebaseAuth.instance.signOut();
+                }),
+          ),
+
 
              
+             /*
              ElevatedButton(
                             
               
@@ -163,7 +177,7 @@ class LoginPage extends StatefulWidget {
     ),),
     
           ),
-              
+              */
               
               
             
