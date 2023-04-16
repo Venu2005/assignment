@@ -70,77 +70,8 @@ class LoginPage extends StatefulWidget {
                 height: 50,
               ),
 
-   /*           Container(
-                  child :Text(
-                    "Username", style: TextStyle(fontSize: 30,
-                   color: Colors.white,
-                  fontWeight: FontWeight.bold),
-                  ),
+   
 
-              ),
-
-
-               SizedBox(
-                height: 15,
-              ),
-
-
-              Container(
-                width: 200,
-                child: Column(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(color: Colors.white, ),
-                      
-                      child: TextField(
-                        controller: usernameController,
-                              
-                           
-                        textInputAction: TextInputAction.next,
-                      ),
-                    ),
-                  ]
-                ),
-              ),
-                
-                   SizedBox(
-                height: 35,
-                   ),
-
-
-                  Container(
-                  child :Text(
-                    "Password", style: TextStyle(fontSize: 30,
-                   color: Colors.white,
-                  fontWeight: FontWeight.bold),
-                  ),
-
-              ),
-
-              SizedBox(
-                height: 15,
-              ),
-
-
-               Container(
-                width: 200,
-                child: Column(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(color: Colors.white, ),
-                      
-                      child: TextField(
-                        controller: passwordController,
-                        
-                        
-
-                      ),
-                    ),
-                  ]
-                ),
-              ),
-
-*/
               SizedBox(
                 height: 20,
               ),
@@ -155,29 +86,7 @@ class LoginPage extends StatefulWidget {
 
 
              
-             /*
-             ElevatedButton(
-                            
-              
-              onPressed: () {
-              if (usernameController.text.isNotEmpty &&
-                  passwordController.text.isNotEmpty) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Frame1(),
-                  ),
-                );
-              }
-            },
-            child: Text("Sign up", style: TextStyle(
-      fontSize: 20.0,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
-    ),),
-    
-          ),
-              */
+            
               
               
             

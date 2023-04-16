@@ -1,5 +1,6 @@
 
 import 'package:assignment/frame1.dart';
+import 'package:assignment/searchmovie.dart';
 import 'package:assignment/toprated.dart';
 import 'package:assignment/trending.dart';
 import 'package:assignment/upcoming.dart';
@@ -96,6 +97,13 @@ class Frame6State extends State<Frame6> {
     TopRatedMovies(topRated: topRatedmovies,),
     UpcomingMovies(upcoming: upcomingmovies,),
 
+
+
+  Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+      
+  
 ElevatedButton(
                             
               
@@ -116,6 +124,33 @@ ElevatedButton(
     ),),
     
           ),
+
+
+ElevatedButton(
+                            
+              
+              onPressed: () {
+             
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SearchPage(),
+                  ),
+                );
+              
+            },
+            child: Text("SEARCH", style: TextStyle(
+      fontSize: 20.0,
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
+    ),),
+    
+          ),
+
+
+
+            ],
+            ),
 
     ]
     
